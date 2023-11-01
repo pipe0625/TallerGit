@@ -2,11 +2,16 @@ def add(num_1, num_2):
     result = num_1 + num_2
     return result
 
+def subtract(num_1, num_2):
+    result = num_1 - num_2
+    return result
+
 def game():
     score = 0
     while True:
         print('======== Menu ========')
         print('1. Add')
+        print('2. Subtract')  # Agregamos la opción de resta
         print('0. Exit')
         option = int(input('\nChoose an option: '))
         if option == 0:
@@ -16,13 +21,15 @@ def game():
         answer = int(input('Enter your answer: '))
         if option == 1:
             result = add(num_1, num_2)
+        elif option == 2:  # Si se elige la opción 2, utilizamos la función de resta
+            result = subtract(num_1, num_2)
         if result == answer:
             score += 1
             print('Correct!!')
         else:
             print('Incorrect')
-    print('======== Game Over ========'
-        f'Your score is {score}'
-        'Keep going!')
+    print('======== Game Over ========')
+    print(f'Your score is {score}')
+    print('Keep going!')
 
 game()
