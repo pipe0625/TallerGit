@@ -1,4 +1,4 @@
-def add(num_1, num_2):
+def add(num_1, num_2): # Todas unidas
     result = num_1 + num_2
     return result
 
@@ -35,7 +35,7 @@ def game():
         print('3. Multiply')
         print('4. Divide')
         print('5. Power')
-        print('6. Modulo')  # Agregamos la opción de módulo
+        print('6. Modulo')  
         print('0. Exit')
         option = int(input('\nChoose an option: '))
         if option == 0:
@@ -53,7 +53,7 @@ def game():
             result = divide(num_1, num_2)
         elif option == 5:
             result = power(num_1, num_2)
-        elif option == 6:  # Si se elige la opción 6, utilizamos la función de módulo
+        elif option == 6:  
             result = modulo(num_1, num_2)
         if result == answer:
             score += 1
