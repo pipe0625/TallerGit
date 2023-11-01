@@ -20,6 +20,12 @@ def power(num_1, num_2):
     result = num_1 ** num_2
     return result
 
+def modulo(num_1, num_2):
+    if num_2 == 0:
+        return "Cannot calculate modulo by zero"
+    result = num_1 % num_2
+    return result
+
 def game():
     score = 0
     while True:
@@ -28,7 +34,8 @@ def game():
         print('2. Subtract')
         print('3. Multiply')
         print('4. Divide')
-        print('5. Power')  # Agregamos la opción de potencia
+        print('5. Power')
+        print('6. Modulo')  # Agregamos la opción de módulo
         print('0. Exit')
         option = int(input('\nChoose an option: '))
         if option == 0:
@@ -44,8 +51,10 @@ def game():
             result = multiply(num_1, num_2)
         elif option == 4:
             result = divide(num_1, num_2)
-        elif option == 5:  # Si se elige la opción 5, utilizamos la función de potencia
+        elif option == 5:
             result = power(num_1, num_2)
+        elif option == 6:  # Si se elige la opción 6, utilizamos la función de módulo
+            result = modulo(num_1, num_2)
         if result == answer:
             score += 1
             print('Correct!!')
